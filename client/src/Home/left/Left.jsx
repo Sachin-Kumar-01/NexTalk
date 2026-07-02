@@ -22,9 +22,6 @@ function Chats() {
 
   return (
     <div className='w-full bg-black text-white flex flex-col h-full'>
-      <div className='flex items-center p-2 px-4 md:px-5'>
-        <img src='/logo.png' alt='ChitChat' className='h-12 w-auto object-contain' />
-      </div>
       <Search />
       <hr></hr>
       <Users />
