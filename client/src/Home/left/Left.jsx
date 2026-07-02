@@ -2,7 +2,7 @@ import React from 'react';
 import Search from './Search';
 import Users from './Users';
 
-import axios from 'axios';
+import api from '../../utils/axios';
 import { useAuth } from '../../context/AuthProvider';
 import toast from 'react-hot-toast';
 
@@ -11,7 +11,7 @@ function Chats() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('/api/user/logout', {}, { withCredentials: true });
+      await api.post('/api/user/logout');
       toast.success('Logged out successfully');
     } catch (error) {
       toast.error('Logout failed');

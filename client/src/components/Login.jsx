@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
-import axios from 'axios'
+import api from '../utils/axios'
 import { useAuth } from '../context/AuthProvider'
 import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
@@ -16,11 +16,9 @@ function Login() {
         setLoading(true)
 
         try {
-            const response = await axios.post('/api/user/login', {
+            const response = await api.post('/api/user/login', {
                 email: data.email,
                 password: data.password,
-            }, {
-                withCredentials: true,
             })
 
             toast.success(response.data?.message || 'Login successful')

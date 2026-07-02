@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+import api from '../../utils/axios'
 import { MdLogout } from "react-icons/md";
 import { useAuth } from '../../context/AuthProvider';
 import toast from 'react-hot-toast';
@@ -9,7 +9,7 @@ function Logout() {
 
     const handleLogout = async () => {
         try {
-            await axios.post('/api/user/logout', {}, { withCredentials: true });
+            await api.post('/api/user/logout');
             toast.success('Logged out successfully');
         } catch (error) {
             toast.error('Logout failed');
