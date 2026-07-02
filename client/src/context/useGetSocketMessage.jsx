@@ -5,7 +5,7 @@ import notificationSound from "../assets/notification.mp3";
 
 function useGetSocketMessage() {
     const { socket } = useSocketContext();
-    const { messages, setMessages } = useconversations();
+    const { setMessages } = useconversations();
 
     useEffect(() => {
         if (!socket) return;
@@ -13,12 +13,13 @@ function useGetSocketMessage() {
         const handleNewMessage = (newMessage) => {
             const sound = new Audio(notificationSound);
             sound.play();
-            setMessages([...messages, newMessage]);
+            const currentMessages = useconversations.getState().messages;
+            setMessages([...currentMessages, newMessage]);
         };
 
         socket.on("newMessage", handleNewMessage);
         return () => { socket.off("newMessage", handleNewMessage); }
-    }, [socket, messages, setMessages])
+    }, [socket, setMessages])
 }
 
 export default useGetSocketMessage;
