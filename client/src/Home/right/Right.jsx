@@ -4,10 +4,12 @@ import Messages from './Messages';
 import Type from './Type';
 import useconversations from '../../statemanage/useconversation';
 import { useAuth } from '../../context/AuthProvider';
+import useGetSocketMessage from '../../context/useGetSocketMessage';
 
 function Right() {
   const { selectedConversation, setSelectedConversation } = useconversations();
   const { AuthUser } = useAuth();
+  useGetSocketMessage(); // Listen for socket messages at this level so it's always active
 
   useEffect(() => {
     return setSelectedConversation(null);

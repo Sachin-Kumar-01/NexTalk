@@ -14,10 +14,13 @@ const SocketProvider = ({ children }) => {
 
     useEffect(() => {
         if (AuthUser) {
-            const newSocket = io(import.meta.env.VITE_API_URL || "http://localhost:7777", {
+            const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:7777";
+            const newSocket = io(socketUrl, {
                 query: {
                     userId: AuthUser._id,
                 },
+                transports: ["websocket", "polling"],
+                withCredentials: true,
             });
             setSocket(newSocket);
             newSocket.on("getonlineusers", (users) => {

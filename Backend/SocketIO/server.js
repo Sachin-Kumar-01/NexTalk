@@ -1,6 +1,10 @@
 import { Server } from "socket.io";
 import http from "http";
 import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 const app = express();
 
 const server = http.createServer(app);
@@ -9,7 +13,8 @@ const io = new Server(server, {
         origin: process.env.FRONTEND_URL || "http://localhost:5173",
         methods: ["GET", "POST"],
         credentials: true,
-    }
+    },
+    transports: ["websocket", "polling"],
 });
 
 export const getReceiverSocketId = (userId) => {
@@ -35,4 +40,4 @@ io.on("connection", (socket) => {
     })
 });
 
-export { app, io, server };
+export { app, io, server };

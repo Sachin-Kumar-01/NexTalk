@@ -2,11 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import Message from './Message';
 import useGetMessage from '../../context/useGetMessage';
 import Loading from '../../components/loading';
-import useGetSocketMessage from '../../context/useGetSocketMessage';
 
 function Messages() {
   const { loading, messages } = useGetMessage();
-  useGetSocketMessage();
   const lastMsgRef = useRef();
   useEffect(() => {
     setTimeout(() => {
