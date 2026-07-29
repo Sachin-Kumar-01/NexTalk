@@ -41,6 +41,7 @@ function Signup() {
     <div className="min-h-screen bg-base-200 px-4 py-10 text-base-content">
       <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-5xl items-center lg:grid-cols-2 lg:gap-10">
         <section className="mb-8 space-y-5 lg:mb-0">
+          <img src="/nextalk-logo-signup.png" alt="NexTalk" className="w-48"/>
           <h1 className="max-w-md text-4xl font-bold leading-tight sm:text-5xl">
             Meet new people, share ideas, and stay connected.
           </h1>
@@ -61,7 +62,7 @@ function Signup() {
             <div className="card-body p-8">
               <div className="mb-6">
                 <h2 className="text-2xl font-semibold">Create Account</h2>
-                <p className="mt-2 text-sm text-base-content/60">Join ChitChat and start chatting with people around the world.</p>
+                <p className="mt-2 text-sm text-base-content/60">Join NexTalk and start chatting with people around the world.</p>
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>

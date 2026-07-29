@@ -1,4 +1,24 @@
-node_modules
-dist
-*.log
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables / secrets
 .env
+.env.*
+**/.env
+**/.env.*
+
+# Keep frontend production config
+!client/.env.production
+
+# Build output
+dist/
+**/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: chitchat-backend
+    name: NexTalk-backend
     runtime: node
     rootDir: Backend
     buildCommand: npm install

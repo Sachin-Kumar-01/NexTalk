@@ -1,4 +1,4 @@
-# 💬 ChitChat - Real-Time Chat Application
+# 💬 NexTalk - Real-Time Chat Application
 
 <p align="center">
   <img src="https://img.shields.io/badge/MERN-Full%20Stack-success?style=for-the-badge" />
@@ -8,14 +8,14 @@
 </p>
 
 <p align="center">
-A modern, full-stack real-time chat application built with the <b>MERN Stack</b> and <b>Socket.IO</b>. ChitChat enables users to communicate instantly with a beautiful, responsive interface and secure authentication.
+A modern, full-stack real-time chat application built with the <b>MERN Stack</b> and <b>Socket.IO</b>. NexTalk enables users to communicate instantly with a beautiful, responsive interface and secure authentication.
 </p>
 
 ---
 
 ## 📖 Overview
 
-**ChitChat** is a real-time messaging platform that provides fast and secure communication between users. It uses **Socket.IO** for instant message delivery, **JWT Authentication** for secure login, and **MongoDB** for storing user and chat data.
+**NexTalk** is a real-time messaging platform that provides fast and secure communication between users. It uses **Socket.IO** for instant message delivery, **JWT Authentication** for secure login, and **MongoDB** for storing user and chat data.
 
 The application follows modern development practices with a clean architecture, responsive UI, and scalable backend.
 
@@ -68,7 +68,7 @@ The application follows modern development practices with a clean architecture, 
 
 ```
 
-ChitChat/
+NexTalk/
 │
 ├── Backend/
 │   ├── controllers/
@@ -111,9 +111,9 @@ Before running the project, make sure you have:
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/chitchat.git
+git clone https://github.com/yourusername/NexTalk.git
 
-cd chitchat
+cd NexTalk
 ````
 
 ---
