@@ -1,3 +1,8 @@
+## Live Demo
+
+NexTalk is deployed and available here:
+
+https://nextalk-xi.vercel.app
 # 💬 NexTalk - Real-Time Chat Application
 
 <p align="center">
